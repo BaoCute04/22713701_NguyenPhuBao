@@ -23,7 +23,7 @@ services:
       retries: 5
   # --- Auth Service ---
   auth:
-    build: ${DOCKERHUB_USERNAME}/auth:${IMAGE_TAG} #./auth 
+    build: ${DOCKERHUB_USERNAME}/auth:${IMAGE_TAG}  #./auth
     container_name: auth
     ports:
       - "3000:3000"
@@ -34,7 +34,7 @@ services:
 
   # --- Product Service ---
   product:
-    build: ${DOCKERHUB_USERNAME}/product:${IMAGE_TAG} #./product
+    build: ${DOCKERHUB_USERNAME}/product:${IMAGE_TAG}  #./product
     container_name: product
     ports:
       - "3001:3001"
@@ -51,7 +51,7 @@ services:
 
   # --- Order Service ---
   order:
-    build: ${DOCKERHUB_USERNAME}/order:${IMAGE_TAG} #./order
+    build: ${DOCKERHUB_USERNAME}/order:${IMAGE_TAG}  #./order
     container_name: order
     ports:
       - "3002:3002"
@@ -68,7 +68,7 @@ services:
 
   # --- API Gateway ---
   api-gateway:  
-    build: ${DOCKERHUB_USERNAME}/api-gateway:${IMAGE_TAG} #./api-gateway
+    build: ${DOCKERHUB_USERNAME}/api-gateway:${IMAGE_TAG}  #./api-gateway
     container_name: api-gateway
     ports:
       - "3003:3003"

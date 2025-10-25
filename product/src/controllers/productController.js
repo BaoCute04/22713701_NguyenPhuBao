@@ -23,7 +23,6 @@ class ProductController {
       res.status(200).json(product);
   }
 
-  // Lấy đơn hàng bằng id đơn hàng
   async getOrderStatus(req, res, next) {
       const { orderId } = req.params;
       const order = this.ordersMap.get(orderId);
